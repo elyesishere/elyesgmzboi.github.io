@@ -162,8 +162,15 @@ header {
 }
 
 .content-box {
-    max-width: 800px;
-    text-align: center;
+    width: 250px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1); /* transparent */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+
+    backdrop-filter: blur(6px); /* optional glass effect */
+    color: white;
+    font-size: 16px;
 }
 
 
@@ -238,4 +245,5 @@ footer {
     color: var(--nav-text);
     text-align: center;
     padding: 1rem;
+
 }
