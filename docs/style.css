@@ -1,27 +1,39 @@
-
+/*dark mode*/
 :root {
     --bg-color: #121212;
     --text-color: #e0e0e0;
     --nav-bg: #000000;
     --nav-text: #e0e0e0;
     --alt-bg: #1e1e1e;
-    --accent-color: #bb86fc;
+    --accent-color: #3498db;
     --input-bg: #333333;
     --input-border: #555;
+    --background:  rgba(255, 255, 255, 0.08);
+    --border: 1px solid rgba(255, 255, 255, 0.25);
+    
+    
 }
 
-/* THE DARK MODE THING (don't forget the dark page is the default, not the light one) */
  
-
+/*light mode*/
 body:has(.toggle-checkbox:checked) {
     --bg-color: #ffffff;
     --text-color: #333333;
     --nav-bg: #333333;
     --nav-text: #ffffff;
-    --alt-bg: #f4f4f4;
+    --alt-bg: #e3e3e3;
     --accent-color: #3498db;
     --input-bg: #ffffff;
     --input-border: #ccc;
+    --background:  rgba(255, 255, 255, 0.814);
+    --border: 1px solid rgba(99, 99, 99, 0.349);
+    
+    
+    
+}
+.content-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 @keyframes fadeInSlideUp {
     
@@ -53,7 +65,7 @@ body:has(.toggle-checkbox:checked) {
 
 
 h1 {
-    
+    text-align: center;
     opacity: 0; 
     animation-name: fadeInSlideUp;
     animation-duration: 1.2s;
@@ -61,7 +73,8 @@ h1 {
     animation-fill-mode: forwards; 
 }
 .content-box p{
-    opacity: 0; 
+    text-align: center;
+    opacity: 1; 
     animation-name: secondfadeInSlideUp;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
@@ -81,10 +94,14 @@ h1 {
 .toggle-checkbox {
     display: none;
 }
+.toggle-checkbox:hover{
+    color: var(--accent-color);
+    cursor: default;
+}
 
 /* label being a square*/
 .toggle-label {
-    cursor: pointer;
+    cursor:help;
     font-size: 1.2rem;
     padding: 5px;
     border: 1px solid var(--nav-text);
@@ -113,27 +130,32 @@ h1 {
 }
 
 body {
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: var(--bg-color);
     color: var(--text-color);
+    
 }
 
 header {
+    z-index: 999;
     background-color: var(--nav-bg);
     color: var(--nav-text);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+   
 }
 
 .navbar {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 10px;
 }
 
 .nav-links {
@@ -154,23 +176,31 @@ header {
 }
 
 .section-container {
-    padding: 4rem 2rem;
-    min-height: 80vh;
+    
+    padding: 64px 32px;
+    min-height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .content-box {
-    width: 250px;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.1); /* transparent */
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 12px;
+    width: 1000px;
+    padding: 12px 32px;
+    cursor:help;
+    
+    background: var(--background);
+    border: var(--border);
 
-    backdrop-filter: blur(6px); /* optional glass effect */
-    color: white;
-    font-size: 16px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+
+    color: var(--text-color);
+
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
 
@@ -189,7 +219,7 @@ h1, h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 2rem;
+    margin-top: 32px;
 }
 
 .skills-list li {
@@ -197,6 +227,11 @@ h1, h2 {
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
+    
+}
+.skills-list li:hover {
+    transform: scale(1.15); 
+    
 }
 
 .contact-form {
@@ -233,17 +268,20 @@ h1, h2 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .btn-submit:hover {
-    opacity: 0.8;
+    
+    background-color: var(--accent-color);
 }
 
 footer {
     background-color: var(--nav-bg);
     color: var(--nav-text);
     text-align: center;
-    padding: 1rem;
-
+    padding: 16px;
+}
+footer p:hover{
+    color: var(--accent-color);
 }
