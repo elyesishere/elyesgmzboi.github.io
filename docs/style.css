@@ -13,28 +13,57 @@
     
     
 }
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+
+
 
  
 /*light mode*/
 body:has(.toggle-checkbox:checked) {
     --bg-color: #ffffff;
-    --text-color: #333333;
+    --text-color: #3f3f3f;
     --nav-bg: #333333;
     --nav-text: #ffffff;
     --alt-bg: #e3e3e3;
     --accent-color: #3498db;
     --input-bg: #ffffff;
     --input-border: #ccc;
-    --background:  rgba(255, 255, 255, 0.814);
-    --border: 1px solid rgba(99, 99, 99, 0.349);
+    --background:  rgba(255, 255, 255, 0.048);
+    --border: 1px solid rgb(134, 134, 134);
     
     
     
+}
+#about .content-box{
+    --text-color: #e0e0e0;
+    transition: transform 1.2s ease-in-out;
+    transform: translateX(0px);
+}
+
+#about .content-box:hover{
+    
+    transform: translateX(-200px)
+
+}
+
+#about span{
+    color: #3498db;
 }
 .content-box:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
+
 @keyframes fadeInSlideUp {
     
     0% {
@@ -62,7 +91,9 @@ body:has(.toggle-checkbox:checked) {
     }
 }
 
-
+#contact .content-box h2{
+    color: #ffffff;
+}
 
 h1 {
     text-align: center;
@@ -93,6 +124,7 @@ h1 {
 /* the button */
 .toggle-checkbox {
     display: none;
+    cursor: default;
 }
 .toggle-checkbox:hover{
     color: var(--accent-color);
@@ -101,8 +133,8 @@ h1 {
 
 /* label being a square*/
 .toggle-label {
-    cursor:help;
-    font-size: 1.2rem;
+    
+    font-size: 16px;
     padding: 5px;
     border: 1px solid var(--nav-text);
     border-radius: 5px;
@@ -202,6 +234,7 @@ header {
         box-shadow 0.25s ease,
         background 0.25s ease;
 }
+
 
 
 .bg-alt {
