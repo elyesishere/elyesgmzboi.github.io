@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://elyesishere.github.io/elyesgmzboi.github.io/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body onload="videoswitch()">
+<div class="video-container">
+  <video id="video1" autoplay muted loop class="bgvid1">
+    <source src="video/wavy.mp4" type="video/mp4">
+  
+</video>
+  <video id="video2" autoplay muted loop class="bgvid2">
+    <source src="video/273567.mp4" type="video/mp4">
+  
+</video>
+</div>
+<script src="script.js"></script>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="https://elyesishere.github.io/elyesgmzboi.github.io/#about">About Me</a></li>
+                <li><a href="https://elyesishere.github.io/elyesgmzboi.github.io/#skills">Skills</a></li>
+                <li><a href="https://elyesishere.github.io/elyesgmzboi.github.io/#contact">Contact</a></li>
+                
+                <li title="Switch to dark mode/Light mode">
+                    <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox" title="Switch to Dark Mode/Light Mode" onchange="videoswitch()">
+                    <label for="dark-mode-toggle" class="toggle-label">
+                        <span class="icon-moon">☀️</span>
+                        <span class="icon-sun">🌙</span>
+                    </label>
+                </li>
+                </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section-container">
+        <div class="content-box">
+            <h1>Hi, I'm  <span class="ez">Elyes Zguem</span></h1>
+            <p>I am a passionate web developer, software engineer and a professional video editor starting my journey. I love building clean, functional websites, providing services like software building and making impressive video with the astonishing visual effects,while finding out about new technologies.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section-container bg-alt">
+        <div class="content-box">
+            <h2>My Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Git &amp; GitHub</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section-container">
+        <div class="content-box">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="https://elyesishere.github.io/elyesgmzboi.github.io/#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Example G. Example" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Example@Example.com" required="">
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025/2026 My Portfolio. Built with HTML &amp; CSS.</p>
+    </footer>
+
+
+
+</body></html>
