@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-
+<div class="video-container">
+  <video id="video1" autoplay muted loop class="background-video">
+    <source id="videoo" src="video/wavy.mp4" type="video/mp4">
+  
+</video>
+  <video id="video2" autoplay muted loop class="background-video hidden">
+    <source src="video/273567.mp4" type="video/mp4">
+  
+</video>
+</div>
     <header>
         <nav class="navbar">
             <div class="logo">MyPortfolio</div>
@@ -29,7 +40,7 @@
 
     <section id="about" class="section-container">
         <div class="content-box">
-            <h1>Hi, I'm Elyes Zguem</h1>
+            <h1>Hi, I'm  <span class="ez">Elyes Zguem</span></h1>
             <p>I am a passionate web developer, software engineer and a professional video editor starting my journey. I love building clean, functional websites, providing services like software building and making impressive video with the astonishing visual effects,while finding out about new technologies.</p>
         </div>
     </section>
@@ -41,7 +52,7 @@
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>JavaScript</li>
-                <li>Git & GitHub</li>
+                <li>Git &amp; GitHub</li>
             </ul>
         </div>
     </section>
@@ -52,11 +63,11 @@
             <form class="contact-form" action="#" method="POST">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Example G. Example" required>
+                    <input type="text" id="name" name="name" placeholder="Example G. Example" required="">
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Example@Example.com" required>
+                    <input type="email" id="email" name="email" placeholder="Example@Example.com" required="">
                 </div>
                 <button type="submit" class="btn-submit">Send Message</button>
             </form>
@@ -64,8 +75,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2025/2026 My Portfolio. Built with HTML & CSS.</p>
+        <p>© 2025/2026 My Portfolio. Built with HTML &amp; CSS.</p>
     </footer>
 
-</body>
-</html>
+
+
+</body></html>
